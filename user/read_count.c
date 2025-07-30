@@ -5,7 +5,7 @@
 int
 main(int argc, char *argv[])
 {
-  int count = getreadcount();
+  uint64 count = getreadcount();
   printf("Read count: %d\n", count);
   exit(0);
 }
