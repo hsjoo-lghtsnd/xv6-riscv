@@ -1,4 +1,5 @@
 struct stat;
+#include "kernel/pstat.h"
 
 // system calls
 int fork(void);
@@ -22,7 +23,9 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
-int getreadcount(void);
+uint64 getreadcount(void);
+int settickets(int);
+int getpinfo(struct pstat *);
 
 // ulib.c
 int stat(const char*, struct stat*);

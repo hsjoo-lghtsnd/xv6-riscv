@@ -6,6 +6,6 @@ int
 main(int argc, char *argv[])
 {
   uint64 count = getreadcount();
-  printf("Read count: %d\n", count);
+  printf("Read count: %ld\n", count);
   exit(0);
 }

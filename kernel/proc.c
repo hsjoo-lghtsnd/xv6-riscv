@@ -5,6 +5,7 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "defs.h"
+#include "pstat.h"
 
 struct cpu cpus[NCPU];
 
@@ -692,4 +693,19 @@ procdump(void)
     printf("%d %s %s", p->pid, state, p->name);
     printf("\n");
   }
+}
+
+// H2: process control, set tickets
+int
+sys_settickets(int number)
+{
+  return 0;
+}
+
+
+// H2: process info, getpinfo
+int
+sys_getpinfo (struct pstat * rcvd)
+{
+  return 0;
 }
