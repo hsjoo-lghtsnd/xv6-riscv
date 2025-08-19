@@ -185,5 +185,11 @@ void            virtio_disk_init(void);
 void            virtio_disk_rw(struct buf *, int);
 void            virtio_disk_intr(void);
 
+// rng.c
+void			rng_init_percpu(uint64 global_seed);
+uint32			rng_u32(void);
+uint32			rng_bounded(uint32 bound);
+
+
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
